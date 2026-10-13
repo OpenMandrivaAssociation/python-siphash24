@@ -1,7 +1,7 @@
 %define module siphash24
 
 Name:		python-siphash24
-Version:	1.8
+Version:	1.9
 Release:	1
 Summary:	Streaming-capable SipHash-1-3 and SipHash-2-4 Implementation
 License:	Apache-2.0 OR LGPL-2.1-or-later
@@ -26,7 +26,7 @@ export LDFLAGS="%{ldflags} -lpython%{pyver}"
 %check
 export CI=true
 export PYTHONPATH="%{buildroot}%{python_sitearch}:${PWD}"
-%{__python3} -m unittest discover -v
+%{__python} -m unittest discover -v
 
 %files
 %doc README.rst
